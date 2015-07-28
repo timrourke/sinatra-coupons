@@ -1,0 +1,22 @@
+<section class="coupons coupons--all">
+	<h1>All Coupons</h1>
+	<div>
+		
+		<% coupons.each do |coupon| %>	
+			<ul>
+				<li><%= coupon.title %></li>
+				<li><%= coupon.description %></li>
+				<li><%= coupon.discount %></li>
+				<li><%= coupon.expiration_date %></li>
+				<li><%= coupon.vendor %></li>
+				<li><%= coupon.img_url %></li>
+			</ul>
+			<p><a href="/coupons/edit/<%= coupon.id %>">Edit Coupon</a></p>
+			<p><a href="/coupons/delete/<%= coupon.id %>">Delete Coupon</a></p>
+			<hr>
+		<% end %>	
+
+		<p><a href="/coupons/new">Add a coupon</a></p>
+
+	</div>	
+</section>

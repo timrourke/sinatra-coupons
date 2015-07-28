@@ -1,0 +1,17 @@
+<section class="coupons coupons--single">
+	<h1>Coupon: <%= coupon.title %></h1>
+	
+		<ul>
+			<li><%= coupon.title %></li>
+			<li><%= coupon.description %></li>
+			<li><%= coupon.discount %></li>
+			<li><%= coupon.expiration_date %></li>
+			<li><%= coupon.vendor %></li>
+			<li><%= coupon.img_url %></li>
+		</ul>
+
+	<p><a href="/coupons/edit/<%= coupon.id %>">Edit Coupon</a></p>
+	<p><a href="/coupons/delete/<%= coupon.id %>">Delete Coupon</a></p>
+
+	<a href="/coupons/">&lt;- Back to Coupons</a>
+</section>

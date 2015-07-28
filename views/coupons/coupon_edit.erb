@@ -1,0 +1,17 @@
+<section class="coupons coupons--edit">
+	<h1>Edit Coupon</h1>
+	<form method="post" action="/coupons/edit">
+
+		<input type="text" name="coupon_title" value="<%= coupon.title %>">
+		<textarea name="coupon_description"><%= coupon.description %></textarea>
+		<input type="number" name="coupon_discount" value="<%= coupon.discount %>">
+		<input type="text" name="coupon_expiration_date" value="<%= coupon.expiration_date %>">
+		<input type="text" name="coupon_vendor" value="<%= coupon.vendor %>">
+		<input type="text" name="coupon_img_url" value="<%= coupon.img_url %>">
+		<input type="hidden" name="coupon_id" value="<%= coupon.id %>">
+
+		<input type="submit">
+		
+	</form>	
+	<p><a href="/coupons">Back to coupons</a></p>
+</section>

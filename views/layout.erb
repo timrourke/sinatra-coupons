@@ -1,1 +1,32 @@
-index
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sinatra ActiveRecord Example - Coupons</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="site-header clearfix">
+			<nav class="site-nav">
+				<ul>
+					<li class="site-nav__item"><a href="/">Home</a></li>
+					<li class="site-nav__item"><a href="/coupons">Coupons</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="site-main">
+			<div class="content-wrapper">
+				<%= yield %>			
+			</div>
+		</main>
+	</div>
+
+	<footer class="site-footer">
+		<p>&copy; 2015 Tim Rourke</p>
+	</footer>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="/js/global.js"></script>
+</body>
+</html>

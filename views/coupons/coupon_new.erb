@@ -1,0 +1,16 @@
+<section class="coupons coupons--add">
+	<h1>Add Coupon</h1>
+	<form method="post" action="/coupons/new">
+
+		<input type="text" name="coupon_title" placeholder="Title">
+		<textarea name="coupon_description">Coupon Description</textarea>
+		<input type="number" name="coupon_discount" placeholder="Discount">
+		<input type="text" name="coupon_expiration_date" placeholder="Expiration Date">
+		<input type="text" name="coupon_vendor" placeholder="Vendor">
+		<input type="text" name="coupon_img_url" placeholder="Image URL">
+
+		<input type="submit">
+		
+	</form>
+	<p><a href="/coupons">Back to coupons</a></p>
+</section>
