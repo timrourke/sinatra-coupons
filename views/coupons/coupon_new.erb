@@ -1,15 +1,38 @@
 <section class="coupons coupons--add">
 	<h1>Add Coupon</h1>
-	<form method="post" action="/coupons/new">
+	<form method="post" action="/coupons/new" enctype='multipart/form-data'>
 
-		<input type="text" name="coupon_title" placeholder="Title">
-		<textarea name="coupon_description">Coupon Description</textarea>
-		<input type="number" name="coupon_discount" placeholder="Discount">
-		<input type="text" name="coupon_expiration_date" placeholder="Expiration Date">
-		<input type="text" name="coupon_vendor" placeholder="Vendor">
-		<input type="text" name="coupon_img_url" placeholder="Image URL">
+		<label>
+			Title
+			<input type="text" name="coupon_title" placeholder="Title">	
+		</label>
+		
+		<label>
+			Description
+			<textarea name="coupon_description">Coupon Description</textarea>	
+		</label>
+		
+		<label>
+			Discount
+			<input type="number" name="coupon_discount" placeholder="Discount">	
+		</label>
+		
+		<label>
+			Expiration Date
+			<input type="text" name="coupon_expiration_date" placeholder="Expiration Date">	
+		</label>
+		
+		<label>
+			Vendor
+			<input type="text" name="coupon_vendor" placeholder="Vendor">	
+		</label>
+		
+		<label>
+			Coupon Image
+			<input type="file" name="coupon_image">	
+		</label>
 
-		<input type="submit">
+		<input class="button--primary" type="submit" value="Add Coupon">
 		
 	</form>
 	<p><a href="/coupons">Back to coupons</a></p>

@@ -1,17 +1,23 @@
-<section class="coupons coupons--single">
-	<h1>Coupon: <%= coupon.title %></h1>
+<section class="coupons coupons--single clearfix">
 	
-		<ul>
-			<li><%= coupon.title %></li>
-			<li><%= coupon.description %></li>
-			<li><%= coupon.discount %></li>
-			<li><%= coupon.expiration_date %></li>
-			<li><%= coupon.vendor %></li>
-			<li><%= coupon.img_url %></li>
-		</ul>
-
-	<p><a href="/coupons/edit/<%= coupon.id %>">Edit Coupon</a></p>
-	<p><a href="/coupons/delete/<%= coupon.id %>">Delete Coupon</a></p>
+	<article class="coupon">
+		<figure>
+			<div class="coupon__image">
+				<div class="coupon__discount"><%= @coupon.discount.to_i %>% off</div>
+				<p class="coupon__expiration">Expires <%= @coupon.expiration_date %></p>
+				<img src="<%= @coupon.img_url %>" alt="<%= @coupon.title %>" />
+			</div>
+			<figcaption class="clearfix">
+				<h2 class="coupon__title"><%= @coupon.title %></h2>
+				<h3 class="coupon__vendor"><%= @coupon.vendor %></h3>
+				<div class="coupon__description"><%= @coupon.description %></div>
+				<div class="coupon__controls clearfix">
+					<a class="button" href="/coupons/edit/<%= @coupon.id %>">Edit</a>
+					<a class="button" href="/coupons/delete/<%= @coupon.id %>">Delete</a>	
+				</div>
+			</figcaption>
+		</figure>
+	</article>
 
 	<a href="/coupons/">&lt;- Back to Coupons</a>
 </section>

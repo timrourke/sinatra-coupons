@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
 	get '/' do
-		erb :index
+		erb :index, :locals => {'body_class' => 'home'}
 	end
 end

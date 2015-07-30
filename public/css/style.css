@@ -30,12 +30,13 @@ body {
 
 a {
 	text-decoration:none;
+	color:#00B0FF;
 }
 
 section {
 	margin:2em auto;
 	padding:1em;
-	background:linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
+	background:rgba(255,255,255,0.5);
 }
 
 .wrapper {
@@ -44,7 +45,12 @@ section {
 	height: auto !important;
 	height: 100%;
 	margin: 0px 0px -5.25em 0px;
-	background-image:linear-gradient(to bottom, rgba(3,54,92,1), rgba(12,54,71,1));
+	//background-image:linear-gradient(to bottom, rgba(3,54,92,1), rgba(12,54,71,1));
+	background:linear-gradient(
+	   to bottom,
+     rgba(59,169,214,1) 0.31315%,
+	   rgba(90,194,194,1) 50.000%,
+	   rgba(70,209,160,1) 99.756%);
 	background-size:cover;
 	background-repeat:no-repeat; 
 	background-position:center center;
@@ -57,8 +63,24 @@ section {
 	padding:3em 0 5.25em 0;
 }
 
+.coupon--all .content-wrapper {
+	max-width:60em;
+}
+
 .site-header {
 	padding:2em;
+}
+
+.site-title {
+	float:left;
+}
+
+.site-title h1 {
+	margin-top:0;
+}
+
+.site-title h1 a {
+	color:white;
 }
 
 .site-nav ul {
@@ -81,4 +103,196 @@ section {
 .site-footer {
 	padding:1em 2em;
 	color:white;
+}
+
+.home .button {
+	float:right;
+	margin-top:0;
+	margin-bottom:0;
+	margin-left:1em;
+}
+
+form label {
+	width:100%;
+	display:block;
+	margin-bottom:1em;
+	font-size:0.8;
+	text-transform: uppercase;
+	color:#446;
+}
+
+form input,
+form textarea {
+	padding:0.5em;
+	width:100%;
+	display:block;
+	font-size:1em;
+	margin:0.125em auto;
+}
+
+form img {
+	width:100%;
+	height:auto;
+}
+
+input[type="submit"]:hover,
+button:hover {
+	cursor:pointer;
+}
+
+input[type="submit"],
+button,
+.button {
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	min-width:4em;
+	max-width:9em;
+	font-size:1.25em;
+	height:2em;
+	padding:0.5em 1em;
+	line-height:.75em;
+	display:block;
+	margin:1em auto;
+	border:0.075em solid white;
+	outline:none;
+	border-radius:0.125em;
+	background-color:white;
+	text-align:center;
+}
+
+.button--primary,
+form .button--primary {
+	min-width:4em;
+	max-width:9em;
+	font-size:1.25em;
+	height:2em;
+	padding:0.5em 1em;
+	line-height:.75em;
+	display:block;
+	margin:1em auto;
+	border:0.075em solid white;
+	outline:none;
+	border-radius:0.125em;
+	background-color:transparent;
+	background:linear-gradient(to bottom, #00B0FF, #008CCC);
+	color:white;
+	text-align:center;
+}
+
+.coupons .button--primary {
+	clear:both;
+}
+
+.coupon--single .coupon {
+	width:27em;
+	padding:1em;
+	margin:0 auto;
+	float:none;
+}
+
+.coupon {
+	width:32.5%;
+	margin-right:0.83333%;
+	padding:1em;
+	float:left;
+}
+
+@media all and (max-width: 1100px) {
+	.coupon {
+		width:49%;
+		margin:0.5%;
+	}
+}
+
+@media all and (max-width: 700px) {
+	.coupon {
+		width:100%;
+		float:none;
+	}
+}
+
+.coupon figure {
+	margin:0;
+	box-shadow:0 0 3px 3px rgba(0,0,0,0.0375);
+}
+
+.coupon__image {
+	position:relative;
+	margin:0 auto;
+	z-index:1;
+}
+
+.coupon__image::after {
+	content:'';
+	position:absolute;
+	display:block;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	background:linear-gradient(to bottom, rgba(0,0,0,0.125), rgba(0,0,0,0));
+	background-size:cover;
+	overflow:hidden;
+	z-index:2;
+}
+
+.coupon__image img {
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.coupon figcaption {
+	background-color:#f5f5f5;
+	padding:0.5em;
+}
+
+.coupon__discount {
+	position:absolute;
+	top:-0.5em;
+	right:-0.5em;
+	display:block;
+	width:5em;
+	height:0;
+	padding-bottom:5em;
+	text-align:center;
+	line-height:5em;
+	border-radius:50%;
+	background-color:#00B0FF;
+	border:1px solid white;
+	color:white;
+	z-index:10;
+}
+
+.coupon__title,
+.coupon__vendor {
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.coupon__description {
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	height:4em;
+}
+
+.coupon__expiration {
+	position:absolute;
+	top:0em;
+	left:1em;
+	color:white;
+	font-size:0.8em;
+	font-style:italic;
+	z-index:10;
+}
+
+.coupon__controls {
+	float:right;
+}
+
+.coupon__controls .button {
+	font-size:0.8em;
+	width:5em;
+	float:left;
+	margin:0.25em;
 }
